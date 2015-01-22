@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Write a description of class CelebrityNames here.
+ * Scans and sorts by last name Celebrities and their birthdates
  * 
  * @author Roger Jaffe
  * @version 2015-01-19
@@ -30,8 +30,10 @@ public class CelebrityNames
         { 
             Scanner sc = new Scanner( text[j] );
             String firstName = sc.next( );
-            String lastName = sc.next( );
-            reversedName[j] = lastName + ", " + firstName;
+            String middleName = sc.next( );
+            String lastName = sc.next ( );
+            String birthDate = sc.next ( );
+            reversedName[j] = lastName + ", " + firstName + " " + middleName + " -- " + birthDate;
         } 
         
         Arrays.sort(reversedName);
