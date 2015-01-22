@@ -25,19 +25,20 @@ public class CelebrityNames
         //maxIndx is now the highest index of text[], = -1 if no text lines 
         sf.close( ); //We opened a file above, so close it when finished.
 
-        String reversedName[] = new String[maxIndx + 1];
+        String otherName [] = new String[maxIndx + 1];
         for (int j = 0; j <= maxIndx; j++)
         { 
             Scanner sc = new Scanner( text[j] );
             String firstName = sc.next( );
+            String middleName = sc.next( );
             String lastName = sc.next( );
-            reversedName[j] = lastName + ", " + firstName;
+            String birthDate = sc.next( );
+            otherName[j] = birthDate + " -- " + lastName + ", " + firstName + " " + middleName;
         } 
-        
-        Arrays.sort(reversedName);
+        Arrays.sort(otherName);
         for (int j =0; j <= maxIndx; j++)
         { 
-            System.out.println(reversedName[j]);
+            System.out.println(otherName[j]);
         } 
     }
 }
